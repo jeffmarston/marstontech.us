@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marston Technology Consulting | FinTech Leadership & Engineering Excellence</title>
+    <title>Marston Technology Consulting, LLC - Expert Technology Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
         * {
             margin: 0;
@@ -12,389 +16,538 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
+            font-family: 'Urbanist', sans-serif;
             color: #333;
+            overflow-x: hidden;
         }
 
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 2rem 2rem 4rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        /* Logo */
+        .logo-svg {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 12px;
         }
 
-        .header::before {
-            content: '';
-            position: absolute;
+        /* Navigation */
+        nav {
+            position: fixed;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .header-content {
-            position: relative;
-            z-index: 1;
+        nav .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
+            color: #004040;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
         }
 
-        .tagline {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #004040;
+        }
+
+        /* Hero Section with Parallax */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1521080755838-d2311117f767?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1862');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 64, 64, 0.85), rgba(0, 64, 64, 0.6));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 24px;
             font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.95;
         }
 
         .cta-button {
             display: inline-block;
-            background: #ff6b35;
-            color: white;
-            padding: 1rem 3rem;
+            padding: 18px 40px;
+            background: white;
+            color: #004040;
             text-decoration: none;
-            border-radius: 50px;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            font-size: 18px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-            background: #ff7d4d;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 20px;
+            background: white;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            padding: 4rem 0;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1e3c72;
             text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            color: #004040;
+            margin-bottom: 60px;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .expertise-grid {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 40px;
         }
 
-        .expertise-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-            transition: all 0.3s ease;
-            border-top: 4px solid #2a5298;
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .expertise-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .expertise-card h3 {
-            color: #1e3c72;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .expertise-card p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        .stats-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 4rem 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat {
-            padding: 2rem;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .highlights-section {
-            background: white;
-        }
-
-        .highlight-item {
+        .service-card {
+            padding: 40px;
             background: #f8f9fa;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #ff6b35;
-            border-radius: 4px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
-        .highlight-item h4 {
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #004040;
+            box-shadow: 0 10px 30px rgba(0, 64, 64, 0.1);
         }
 
-        .contact-section {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        .service-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #004040;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Parallax Section */
+        .parallax-section {
+            height: 500px;
+            min-height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: 0;
+        }
+
+        .parallax-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 64, 64, 0.75);
+            z-index: 1;
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .parallax-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .parallax-content p {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 20px;
+            background: #f8f9fa;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .email-link {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 600;
+            color: #004040;
+            text-decoration: none;
+            padding: 15px 30px;
+            border: 2px solid #004040;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .email-link:hover {
+            background: #004040;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            background: #004040;
             color: white;
             text-align: center;
-            padding: 5rem 2rem;
         }
 
-        .contact-section h2 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        footer p {
+            font-size: 16px;
             opacity: 0.9;
         }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #004040;
+            cursor: pointer;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            opacity: 0.8;
-        }
-
-        footer {
-            background: #1a1a1a;
-            color: #aaa;
-            text-align: center;
-            padding: 2rem;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            .header {
-                padding: 2rem 1rem 3rem;
+            .hero h1 {
+                font-size: 42px;
             }
 
-            .logo {
-                font-size: 1.5rem;
-            }
-
-            .tagline {
-                font-size: 1.1rem;
+            .hero p {
+                font-size: 18px;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 36px;
             }
 
-            .stat-number {
-                font-size: 2rem;
+            .nav-links {
+                display: none;
             }
 
-            .expertise-grid {
-                grid-template-columns: 1fr;
+            .mobile-menu-toggle {
+                display: block;
             }
 
-            .contact-info {
-                flex-direction: column;
-                gap: 1rem;
+            .parallax-content h2 {
+                font-size: 32px;
+            }
+
+            .parallax-content p {
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">Marston Technology Consulting</div>
-            <p class="tagline">Transforming FinTech Organizations Through Technical Excellence & Leadership</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
-        </div>
-    </header>
-
-    <section class="stats-section">
+    <!-- Navigation -->
+    <nav>
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">100+</div>
-                    <div class="stat-label">Engineers Led</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">$4M+</div>
-                    <div class="stat-label">Budgets Managed</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Teams Built</div>
-                </div>
-            </div>
+            <a href="#" class="logo">
+                <!-- <svg class="logo-svg" viewBox="10 10 160 160" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="90" cy="90" r="70" fill="none" stroke="#004040" stroke-width="2"/>
+                    <polyline points="30,130 60,30 90,120" fill="none" stroke="#004040" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="90,120 120,30 150,130" fill="none" stroke="#004040" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> -->
+                Marston Technology Consulting
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Technology Solutions That Drive Results</h1>
+            <p>Expert consulting for modern businesses ready to scale and innovate</p>
+            <a href="#contact" class="cta-button">Get Started</a>
         </div>
     </section>
 
-    <section class="section">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">Expertise</h2>
-            <p class="section-subtitle">Helping FinTech companies scale through strategic technology leadership, modern architecture, and high-performing engineering cultures.</p>
-            
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="expertise-icon">🏗️</div>
-                    <h3>Software Architecture</h3>
-                    <p>Expert in designing scalable, cloud-native systems. From monoliths to microservices, containerized deployments, and multi-tenant SaaS platforms. Specialized in breaking down organizational silos through cohesive architectural vision.</p>
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Technology Strategy</h3>
+                    <p>Strategic technology assessments, roadmap development, and aligning engineering initiatives with business objectives. Expert guidance for CTOs and technical leadership teams.</p>
                 </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">👥</div>
-                    <h3>Team Building & Leadership</h3>
-                    <p>Proven track record building and scaling engineering teams from 8 to 100+ developers. Expert in fostering cross-functional collaboration, implementing Agile practices, and creating cultures of continuous learning and innovation.</p>
+                <div class="service-card">
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>Cloud-native architectures on GCP and AWS, Kubernetes orchestration, containerized microservices, and modern DevOps practices with enterprise-grade CI/CD pipelines.</p>
                 </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">💹</div>
-                    <h3>FinTech Domain Expertise</h3>
-                    <p>Deep experience in capital markets technology: order management systems, trading platforms, risk systems, compliance tools, and investment management solutions. Understanding of FIX protocol, real-time market data, and regulatory requirements.</p>
+                <div class="service-card">
+                    <h3>Platform Development</h3>
+                    <p>Full-stack platform development using React, Vue.js, TypeScript, C#, Python, and Node.js. Expertise in building scalable multi-tenant SaaS platforms and marketplace solutions.</p>
                 </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">🚀</div>
-                    <h3>Product Development</h3>
-                    <p>From MVP to market leader. Experience delivering sophisticated multi-sided marketplace platforms, modernizing legacy systems, and building AI-powered solutions that provide competitive differentiation.</p>
+                <div class="service-card">
+                    <h3>Engineering Leadership</h3>
+                    <p>Fractional CTO services, team building and scaling, establishing engineering culture, and implementing Agile practices across distributed teams.</p>
                 </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">🤖</div>
+                <div class="service-card">
+                    <h3>Product Modernization</h3>
+                    <p>Legacy system modernization, technical debt reduction, API development, and incremental transformation strategies that maintain business continuity.</p>
+                </div>
+                <div class="service-card">
                     <h3>AI & Innovation</h3>
-                    <p>Pioneering the adoption of AI coding agents and native AI integration in enterprise platforms. Strategic implementation of emerging technologies while maintaining security and quality standards.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">⚙️</div>
-                    <h3>Technical Transformation</h3>
-                    <p>Leading organizations through modernization journeys: establishing CI/CD pipelines, introducing DevOps practices, implementing automated testing, and balancing innovation with technical debt management.</p>
+                    <p>AI integration strategy, implementing AI coding agents, document processing automation, and driving innovation initiatives within engineering organizations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section highlights-section">
+    <!-- Parallax Section -->
+    <section class="parallax-section">
+        <div class="parallax-bg"></div>
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <h2>Strategic Technology Leadership</h2>
+            <p>We partner with innovative companies to transform their technology landscape</p>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="services" style="background: #f8f9fa;">
         <div class="container">
-            <h2 class="section-title">Recent Achievements</h2>
-            
-            <div class="highlight-item">
-                <h4>Built AI-Powered Alternative Investments Platform</h4>
-                <p>As CTO and founding team member at Pando Alts, architected and delivered a sophisticated 4-sided marketplace connecting wealth managers, family offices, GPs, and service providers. Achieved MVP in 6 months and paying customers in 9 months with an 8-person team.</p>
-            </div>
-
-            <div class="highlight-item">
-                <h4>Led Cultural Transformation at Sterling Trading Tech</h4>
-                <p>Managed cross-functional team of 30 engineers with $4M budget. Broke down silos, introduced modern technology stack (React, Kubernetes), and maintained multiple trading platforms while developing next-generation solutions.</p>
-            </div>
-
-            <div class="highlight-item">
-                <h4>Scaled Global Engineering Organization at SS&C Eze</h4>
-                <p>Led 100+ engineers across 20 scrum teams spanning US and India. Spearheaded ground-up rewrite of investment management platform and development of cloud-native trading system serving major investment managers worldwide.</p>
-            </div>
-
-            <div class="highlight-item">
-                <h4>Pioneered Micro-Frontend Architecture</h4>
-                <p>Built Eclipse platform starting with 5-person prototype team, creating one of the industry's first cloud-native, modern web-based trading and accounting platforms. Enabled 20 autonomous teams to contribute to integrated single-page application.</p>
+            <h2 class="section-title">Proven Expertise</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Team Building & Leadership</h3>
+                    <p>From 8-person startup teams to 100+ engineer global organizations, we know how to build, scale, and lead high-performing engineering teams that deliver results.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI Integration</h3>
+                    <p>Native AI integration into platforms for competitive advantage, including document processing, analysis, and leveraging AI coding agents to boost team productivity.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Modern Architecture</h3>
+                    <p>Cloud-native platforms, containerized microservices, and scalable multi-tenant architectures built on GCP, AWS, and Kubernetes infrastructure.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Rapid MVP Development</h3>
+                    <p>Proven track record delivering MVPs in 6 months with paying customers in 9 months, balancing speed to market with long-term scalability.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Legacy Modernization</h3>
+                    <p>Successfully modernized 25-year-old platforms while maintaining business continuity, introducing REST APIs, and establishing CI/CD practices.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Budget Management</h3>
+                    <p>Experience managing multi-million dollar development budgets, optimizing resource allocation, and delivering cost-effective operations across multiple products.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="contact-section" id="contact">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <h2>Ready to Transform Your Technology Organization?</h2>
-            <p>Let's discuss how strategic technology leadership can accelerate your business goals.</p>
-            <a href="mailto:jeffmarston@gmail.com" class="cta-button">Contact Jeff Marston</a>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    📧 <a href="mailto:jeffmarston@gmail.com">jeffmarston@gmail.com</a>
+            <h2 class="section-title">About Marston Technology</h2>
+            <div class="about-content">
+                <p>With over two decades of experience in the FinTech industry, Marston Technology Consulting brings deep expertise in building and scaling engineering organizations that deliver exceptional results.</p>
+                <p>We've led teams ranging from 8 to 100+ engineers across multiple continents, delivering everything from rapid MVP launches to comprehensive enterprise platform modernizations. Our track record includes building AI-powered marketplace platforms, modernizing legacy systems, and establishing cloud-native architectures that scale.</p>
+                <p>Our expertise spans the full technology stack—from front-end frameworks like React and Vue.js to containerized microservices architectures running on Kubernetes. We understand both the technical challenges and the business imperatives that drive successful digital transformation.</p>
+                <p>Whether you need a fractional CTO, strategic technology guidance, or hands-on leadership for a critical initiative, we bring the experience and insight to help your organization thrive in an increasingly competitive landscape.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="services" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Delivering Results</h2>
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="service-card" style="text-align: center;">
+                    <h3 style="font-size: 48px; margin-bottom: 10px;">100+</h3>
+                    <p>Engineers managed across global teams</p>
                 </div>
-                <div class="contact-item">
-                    📱 <a href="tel:617-680-8647">(617) 680-8647</a>
+                <div class="service-card" style="text-align: center;">
+                    <h3 style="font-size: 48px; margin-bottom: 10px;">6 months</h3>
+                    <p>MVP delivery timeline with paying customers in 9</p>
                 </div>
-                <div class="contact-item">
-                    📍 Marblehead, MA
+                <div class="service-card" style="text-align: center;">
+                    <h3 style="font-size: 48px; margin-bottom: 10px;">20+</h3>
+                    <p>Years of software engineering leadership</p>
+                </div>
+                <div class="service-card" style="text-align: center;">
+                    <h3 style="font-size: 48px; margin-bottom: 10px;">$4M+</h3>
+                    <p>Development budgets successfully managed</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="contact-content">
+                <p>Ready to take your technology to the next level? Get in touch to discuss how we can help your business thrive.</p>
+                <a href="mailto:jeff@marstontech.us" class="email-link">jeff@marstontech.us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Marston Technology Consulting, LLC. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Marston Technology Consulting, LLC. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
