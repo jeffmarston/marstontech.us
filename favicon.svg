@@ -3,15 +3,9 @@
   <rect x="0" y="0" width="100" height="100" rx="25" ry="25" fill="black" />
 
 <!-- Left inverted V with gradient -->
-  <polyline points="15,85 30,15 50,60" fill="none" stroke="#005050" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="15,85 30,15 50,60" fill="none" stroke="#115C5F" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
   
   <!-- Right inverted V with gradient -->
-  <polyline points="50,60 70,15 85,85" fill="none" stroke="#907000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
-
-<!-- Left inverted V with gradient -->
-  <polyline points="15,85 30,15 50,60" fill="none" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  
-  <!-- Right inverted V with gradient -->
-  <polyline points="50,60 70,15 85,85" fill="none" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="50,60 70,15 85,85" fill="none" stroke="#907000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
 
 </svg>
