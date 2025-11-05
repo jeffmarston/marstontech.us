@@ -1,0 +1,11 @@
+
+<svg viewBox="10 10 160 160" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="160" height="160" fill="black" />
+  <circle cx="90" cy="90" r="70" fill="none" stroke="white" />
+
+  <!-- Left inverted V with gradient -->
+  <polyline points="30,130 60,30 90,120" fill="none" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Right inverted V with gradient -->
+  <polyline points="90,120 120,30 150,130" fill="none" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
