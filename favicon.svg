@@ -4,8 +4,10 @@
 
 <!-- Left inverted V with gradient -->
   <polyline points="15,85 30,15 50,60" fill="none" stroke="#115C5F" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
-  
+  <polyline points="50,60 70,15 85,85" fill="none" stroke="#907000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+
   <!-- Right inverted V with gradient -->
   <polyline points="50,60 70,15 85,85" fill="none" stroke="#907000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
 
 </svg>
+
