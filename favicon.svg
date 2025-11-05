@@ -3,10 +3,10 @@
   <polyline points="15,75 30,20 50,60" fill="none" stroke="black" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
   <polyline points="50,60 70,20 85,75" fill="none" stroke="black" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <polyline points="15,75 30,20 50,60" fill="none" stroke="#1BDBDB" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="50,60 70,20 85,75" fill="none" stroke="#1BDBDB" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
-
+  <polyline points="15,75 30,20 50,60" fill="none" stroke="#209AA0" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="50,60 70,20 85,75" fill="none" stroke="#209AA0" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+
 
 
 
